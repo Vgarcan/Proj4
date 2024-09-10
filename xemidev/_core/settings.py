@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',  # Google social provider EXAMPLE
     # #> Project's APPs
     'main',
+    'services',
 ]
 
 MIDDLEWARE = [
