@@ -9,7 +9,7 @@
 {% endblock head_title %}
 
 {% comment %} 
-Overrides the Default VALUES. Carefull!
+# Overrides the Default VALUES. Carefull!
 {% endcomment %}
 {% block extra_head %}
 {% endblock extra_head %}
@@ -21,7 +21,10 @@ Overrides the Default VALUES. Carefull!
 {% endblock extra_css %}
 
 {% comment %} 
-# Overrides the BODY tag. Carefull! 
+# Overrides the BODY tag. Carefull!
+# >>> Displayed on the template will OVERRIDES
+content even if it has no information. Delete 
+when not in use <<<
 {% endcomment %}
 {% block body %}
 {% endblock body %}
