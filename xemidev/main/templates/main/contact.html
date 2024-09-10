@@ -1,5 +1,36 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title_page %}Contact{% endblock title_page %}
-{% block content %}{% endblock content %}
+
+{% comment %} 
+# Set the Title for the page 
+{% endcomment %}
+{% block head_title %}
+    Contact Information
+{% endblock head_title %}
+
+{% comment %} 
+# Set the CSS file and Other for the page 
+{% endcomment %}
+{% block extra_head %}
+{% endblock extra_head %}
+
+{% comment %} 
+# Overrides the BODY tag. Carefull! 
+{% endcomment %}
+{% block body %}
+{% endblock body %}
+
+{% comment %}
+# Appends the content in the BODY tag
+{% endcomment %}
+{% block content %}
+    This is contact information
+{% endblock content %}
+
+{% comment %}
+# Append JS files here for the page
+{% endcomment %}
+{% block extra_body %}
+{% endblock extra_body %}
+

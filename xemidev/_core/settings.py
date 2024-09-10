@@ -32,6 +32,9 @@ DEBUG = os.environ.get('DJANGO_DEBUG', False)
 
 ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1']
 
+# SITE IDENTITY
+SITE_ID = 1
+
 
 # Application definition
 
@@ -42,6 +45,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Django EXTRA Apps
+    # #> ALLAUTH
+    'django.contrib.sites',  # required For SITE utilities
+    'allauth',  # MAIN Allauth
+    'allauth.account',  # Local Accounts Management
+    'allauth.socialaccount',  # Social Accounts Management
+    'allauth.socialaccount.providers.google',  # Google social provider EXAMPLE
+    # #> Project's APPs
     'main',
 ]
 
@@ -53,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = '_core.urls'
@@ -106,6 +118,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# -- Allauth's CONFIGURATION --
+ACCOUNT_AUTHENTICATION_METHOD = 'email'  # Use only email for LOGIN
+ACCOUNT_EMAIL_REQUIRED = True  # Email is required
+# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'  # Email verigication is required
+LOGIN_REDIRECT_URL = '/'  # After login, redirect to <TARGET>
+LOGOUT_REDIRECT_URL = '/'  # After logout, redirect to <TARGET>
+# > LogIn Config
+ACCOUNT_PASSWORD_MIN_LENGTH = 8  # 8 min characters for password
+ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False  # No mostrar la contraseña en el formulario tras un fallo
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True  # Doble password required for signup
 
 
 # Internationalization
