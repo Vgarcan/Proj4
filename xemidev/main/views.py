@@ -24,3 +24,6 @@ def pricing(request):
 
 def terms(request):
     return render(request, 'main/tnc.html')
+
+def priv_pol(request):
+    return render(request, 'main/priv-pol.html')

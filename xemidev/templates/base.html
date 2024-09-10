@@ -22,20 +22,23 @@
     {% endblock extra_head %}
 
   
-    <style></style>
+    <style>
+      
+    </style>
   </head>
-  <body>
+  <body class="">
     {% block body %}
       <header>
         {% include "widgets/navbar.html" %}
       </header>
       
+      <main class="vh-100">
       {% block content %}
         <!-- Page content goes here -->
       {% endblock content %}
-
-      <footer>
-        <p>&copy; 2022 My Awesome Website. All rights reserved.</p>
+      </main>
+      <footer class="footer mt-auto py-3 bg-light">
+        {% include "widgets/footer.html" %}
       </footer>
 
       <!-- JS Section -->
