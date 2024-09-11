@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     # #> Project's APPs
     'main',
     'services',
+    'mockgen',
 ]
 
 MIDDLEWARE = [
