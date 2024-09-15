@@ -17,12 +17,15 @@ document.addEventListener('DOMContentLoaded',
          * The navbar collapse element.
          * @type {HTMLElement}
          */
-        const navbarCollapse = document.querySelector('#navbarNav');
+        const navbarCollapse = [document.querySelector('#navbarNavLeft'), document.querySelector('#navbarNavRight')];
 
         toggler.addEventListener('click', function() {
             /**
              * Toggles the 'collapse' class on the navbar collapse element.
              */
-            navbarCollapse.classList.toggle('collapse');
+            for (item in navbarCollapse) {
+                navbarCollapse[item].classList.toggle('collapse');
+            }
+
         });
     });

@@ -22,6 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('accounts/', include('allauth.urls')),
-    path('services/', include('services.urls')),
     path('generator/', include('mockgen.urls')),
 ]
