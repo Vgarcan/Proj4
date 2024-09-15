@@ -23,4 +23,6 @@ urlpatterns = [
     path('', include('main.urls')),
     path('accounts/', include('allauth.urls')),
     path('generator/', include('mockgen.urls')),
+    path('custom_forms/', include('custom_forms.urls')),
+    path('templates/', include('editables_temp.urls')),
 ]

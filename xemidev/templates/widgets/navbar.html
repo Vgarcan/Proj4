@@ -33,16 +33,10 @@
                     <a class="nav-link" href="{% url 'mockgen:generator' %}">MockGen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'main:about' %}">About</a>
+                    <a class="nav-link" href="{% url 'custom_forms:home' %}">Custom Forms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'main:contact' %}">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'services:home' %}">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'main:terms' %}">Terms & Conditions</a>
+                    <a class="nav-link" href="{% url 'editables_temp:home' %}">Templates</a>
                 </li>
                 
                 {% if user.is_authenticated %}           

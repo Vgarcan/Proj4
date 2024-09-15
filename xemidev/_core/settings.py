@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('DJANGO_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', False)
 
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 # SITE IDENTITY
 SITE_ID = 1
@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     # #> Project's APPs
     'main',
     'editables_temp',
+    'custom_forms',
     'mockgen',
 ]
 
@@ -77,7 +78,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR , 'templates'
+            BASE_DIR, 'templates'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -131,7 +132,8 @@ LOGIN_REDIRECT_URL = '/'  # After login, redirect to <TARGET>
 LOGOUT_REDIRECT_URL = '/'  # After logout, redirect to <TARGET>
 # > LogIn Config
 ACCOUNT_PASSWORD_MIN_LENGTH = 8  # 8 min characters for password
-ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False  # No mostrar la contraseña en el formulario tras un fallo
+# No mostrar la contraseña en el formulario tras un fallo
+ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True  # Doble password required for signup
 
 

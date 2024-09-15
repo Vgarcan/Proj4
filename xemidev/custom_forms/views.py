@@ -4,4 +4,4 @@ from django.shortcuts import render, redirect
 
 
 def home(request):
-    return render(request, 'editables_temp/home.html')
+    return render(request, 'custom_forms/home.html')
